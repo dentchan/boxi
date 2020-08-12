@@ -16,8 +16,6 @@ def image():
     i = request.files['image']  # get the image
     f = ('%s.jpeg' % time.strftime("%Y%m%d-%H%M%S"))
     i.save('%s/%s' % (PATH_TO_TEST_IMAGES_DIR, f))
-    cv2.imshow("he",i)
-    cv2.waitKey(0)
     return Response("%s saved" % f)
 
 # ,ssl_context='adhoc'
