@@ -21,7 +21,7 @@ def index():
     return Response(open('index.html').read(), mimetype="text/html")
 
 # save the image as a picture
-@app.route('/image', methods=['POST'])
+@app.route('/images', methods=['POST'])
 def image():
     net = cv2.dnn.readNetFromCaffe("deploy.prototxt.txt", "res10_300x300_ssd_iter_140000.caffemodel")
     frame = request.files['image']  # get the image
