@@ -1,7 +1,7 @@
 from flask import Flask, request, Response
 import time
 
-PATH_TO_TEST_IMAGES_DIR = './images'
+PATH_TO_TEST_IMAGES_DIR = './image'
 
 app = Flask(__name__)
 
